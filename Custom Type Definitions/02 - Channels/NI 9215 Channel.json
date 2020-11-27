@@ -1,0 +1,20 @@
+{
+  "ChannelType": "NI 9215",
+  "MeasTypes": [
+    "Waveform|Voltage"
+  ],
+  "PropertyDefinitions": null,
+  "Properties": {
+    "ChanStatus": "true"
+  },
+  "ValidationRules": null,
+  "UxRules": null,
+  "LayoutGroups": null,
+  "ConfigurationTabs": [
+    {
+      "Title": "Properties",
+      "Type": "properties",
+      "Properties": null
+    }
+  ]
+}

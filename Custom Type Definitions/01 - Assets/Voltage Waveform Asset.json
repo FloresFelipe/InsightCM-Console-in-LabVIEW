@@ -1,0 +1,162 @@
+{
+  "Type": "Voltage (Waveform)",
+  "Categories": [
+    "Voltage (Waveform)",
+    "Dynamic"
+  ],
+  "Capabilities": null,
+  "Properties": {
+    "Sealed": "true"
+  },
+  "MeasType": "Waveform|Voltage",
+  "Metrics": [
+    {
+      "Name": "Crest Factor",
+      "Properties": null,
+      "Default": true
+    },
+    {
+      "Name": "Derived Peak",
+      "Properties": null,
+      "Default": true
+    },
+    {
+      "Name": "Peak-Peak",
+      "Properties": null,
+      "Default": true
+    },
+    {
+      "Name": "RMS",
+      "Properties": null,
+      "Default": true
+    },
+    {
+      "Name": "Residual",
+      "Properties": {
+        "Amplitude Scale": "rms"
+      },
+      "Default": false
+    },
+    {
+      "Name": "Synchronous",
+      "Properties": {
+        "Amplitude Scale": "rms"
+      },
+      "Default": false
+    },
+    {
+      "Name": "Asynchronous",
+      "Properties": {
+        "Amplitude Scale": "rms"
+      },
+      "Default": false
+    },
+    {
+      "Name": "True Peak",
+      "Properties": null,
+      "Default": true
+    },
+    {
+      "Name": "1x Magnitude",
+      "Properties": {
+        "Amplitude Scale": "rms"
+      },
+      "Default": false
+    },
+    {
+      "Name": "1x Phase",
+      "Properties": null,
+      "Default": false
+    },
+    {
+      "Name": "2x Magnitude",
+      "Properties": {
+        "Amplitude Scale": "rms"
+      },
+      "Default": false
+    },
+    {
+      "Name": "2x Phase",
+      "Properties": null,
+      "Default": false
+    },
+    {
+      "Name": "Subsynchronous",
+      "Properties": {
+        "Amplitude Scale": "rms"
+      },
+      "Default": false
+    },
+    {
+      "Name": "High Frequency",
+      "Properties": {
+        "Amplitude Scale": "rms"
+      },
+      "Default": true
+    },
+    {
+      "Name": "Kurtosis",
+      "Properties": null,
+      "Default": false
+    }
+  ],
+  "TrendAlarmRules": null,
+  "FaultFrequencies": null,
+  "NamedGroups": null,
+  "LocalNodeDefinitionTypes": null,
+  "PropertyDefinitions": [
+    {
+      "Key": "Slope",
+      "Type": "AssetNode",
+      "Label": null,
+      "ValueType": "Double",
+      "DefaultValue": "1",
+      "Properties": null
+    },
+    {
+      "Key": "Offset",
+      "Type": "AssetNode",
+      "Label": null,
+      "ValueType": "Double",
+      "DefaultValue": "0",
+      "Properties": null
+    },
+    {
+      "Key": "Unit",
+      "Type": "AssetNode",
+      "Label": null,
+      "ValueType": "Unit",
+      "DefaultValue": "volt",
+      "Properties": {
+        "UnitType": "Voltage"
+      }
+    }
+  ],
+  "ValidationRules": null,
+  "UxRules": null,
+  "LayoutGroups": [
+    {
+      "Type": "AssetNode",
+      "Name": "Voltage Properties",
+      "PropertyKeys": [
+        "Unit"
+      ],
+      "Properties": {
+        "HelpTopic": "assetpropslist"
+      }
+    },
+    {
+      "Type": "AssetNode",
+      "Name": "Properties",
+      "PropertyKeys": [
+        "Slope",
+        "Offset"
+      ],
+      "Properties": {
+        "HelpTopic": "assetpropslist"
+      }
+    }
+  ],
+  "DataValidationRules": null,
+  "ConfigurationTabs": null
+}

@@ -1,0 +1,417 @@
+{
+  "DeviceType": "CMS-9056",
+  "Capabilities": [
+    {
+      "Type": "SysCfgDeployer",
+      "Properties": {
+        "ApplicationGuid": "REPLACEME",
+        "BootstrapGuid": "{21AC4CC9-3EEB-4AFE-9F51-C71D575186DC}",
+        "FirmwareDeployment": "true"
+      }
+    },
+    {
+      "Type": "DeviceHealth",
+      "Properties": null
+    },
+    {
+      "Type": "NiAuth",
+      "Properties": null
+    },
+    {
+      "Type": "TestPanel",
+      "Properties": null
+    },
+    {
+      "Type": "BurstMode",
+      "Properties": {
+        "MaxRate": "51200",
+        "MaxLength": "10"
+      }
+    }
+  ],
+  "Properties": {
+    "Description": "CompactRIO Periodic and Event Recorder"
+  },
+  "PropertyDefinitions": [
+    {
+      "Key": "TimeTriggerOffset",
+      "Type": null,
+      "Label": "Time Trigger Offset (sec)",
+      "ValueType": "Int32",
+      "DefaultValue": "0",
+      "Properties": {
+        "DisallowEmptySelection": "true"
+      }
+    },
+    {
+      "Key": "SampleRate",
+      "Type": null,
+      "Label": "Sample Rate",
+      "ValueType": "int32",
+      "DefaultValue": "100000",
+      "Properties": {
+        "Values": null
+      }
+    }
+  ],
+  "HardwareDefinitions": [
+    {
+      "Name": "9056-6-2",
+      "Properties": {},
+      "SocketDefinitions": [
+        {
+          "Name": "Controller",
+          "Prefix": "Controller",
+          "Rules": [
+            {
+              "Type": "Required",
+              "Properties": null
+            }
+          ],
+          "SupportedModules": [
+            "cRIO 9056"
+          ]
+        },
+        {
+          "Name": "Slot 1",
+          "Prefix": "Mod1",
+          "Rules": [
+            {
+              "Type": "Required",
+              "Properties": null
+            }
+          ],
+          "SupportedModules": [
+            "NI 9215"
+          ]
+        },
+        {
+          "Name": "Slot 2",
+          "Prefix": "Mod2",
+          "Rules": [
+            {
+              "Type": "SameAsPrevious",
+              "Properties": null
+            }
+          ],
+          "SupportedModules": [
+            "NI 9215"
+          ]
+        },
+        {
+          "Name": "Slot 3",
+          "Prefix": "Mod3",
+          "Rules": [
+            {
+              "Type": "SameAsPrevious",
+              "Properties": null
+            }
+          ],
+          "SupportedModules": [
+            "NI 9215"
+          ]
+        },
+        {
+          "Name": "Slot 4",
+          "Prefix": "Mod4",
+          "Rules": [
+            {
+              "Type": "SameAsPrevious",
+              "Properties": null
+            }
+          ],
+          "SupportedModules": [
+            "NI 9215"
+          ]
+        },
+        {
+          "Name": "Slot 5",
+          "Prefix": "Mod5",
+          "Rules": [
+            {
+              "Type": "SameAsPrevious",
+              "Properties": null
+            }
+          ],
+          "SupportedModules": [
+            "NI 9215"
+          ]
+        },
+        {
+          "Name": "Slot 6",
+          "Prefix": "Mod6",
+          "Rules": [
+            {
+              "Type": "SameAsPrevious",
+              "Properties": null
+            }
+          ],
+          "SupportedModules": [
+            "NI 9215"
+          ]
+        },
+        {
+          "Name": "Slot 7",
+          "Prefix": "Mod7",
+          "Rules": null,
+          "SupportedModules": [
+            "NI 9205 (Static)",
+            "NI 9207 (Static)",
+            "NI 9208 (Static)",
+            "NI 9211 (Static)",
+            "NI 9213 (Static)",
+            "NI 9214 (Static)",
+            "NI 9216 (Static)",
+            "NI 9217 (Static)",
+            "NI 9219 (Static)",
+            "NI 9226 (Static)",
+            "NI 9229 (Static)",
+            "NI 9239 (Static)",
+            "NI 9425 (Static)",
+            "NI 9426 (Static)",
+            "NI 9437 (Static)"
+          ]
+        },
+        {
+          "Name": "Slot 8",
+          "Prefix": "Mod8",
+          "Rules": null,
+          "SupportedModules": [
+            "NI 9205 (Static)",
+            "NI 9207 (Static)",
+            "NI 9208 (Static)",
+            "NI 9211 (Static)",
+            "NI 9213 (Static)",
+            "NI 9214 (Static)",
+            "NI 9216 (Static)",
+            "NI 9217 (Static)",
+            "NI 9219 (Static)",
+            "NI 9226 (Static)",
+            "NI 9229 (Static)",
+            "NI 9239 (Static)",
+            "NI 9425 (Static)",
+            "NI 9426 (Static)",
+            "NI 9437 (Static)"
+          ]
+        }
+      ]
+    }
+],
+
+  "ChannelGroupDefinitions": [
+    {
+      "NumberOfChannels": -1,
+      "ChannelTypes": [
+        "Modbus TCP"
+      ],
+      "DefaultChannelType": "Modbus TCP",
+      "Format": "Modbus TCP{0}",
+      "StartingChannelOffset": 0
+    },
+    {
+      "NumberOfChannels": -1,
+      "ChannelTypes": [
+        "Modbus TCP"
+      ],
+      "DefaultChannelType": "Modbus TCP",
+      "Format": "Modbus TCP{0}",
+      "StartingChannelOffset": 0
+    },
+    {
+      "NumberOfChannels": -1,
+      "ChannelTypes": [
+        "Opc Server"
+      ],
+      "DefaultChannelType": "Opc Server",
+      "Format": "OPC UA{0}",
+      "StartingChannelOffset": 0
+    },
+    {
+      "NumberOfChannels": -1,
+      "ChannelTypes": [
+        "PI Server"
+      ],
+      "DefaultChannelType": "PI Server",
+      "Format": "PI {0}",
+      "StartingChannelOffset": 0
+    }
+  ],
+  "CalculatedMetrics": [
+    "RMS",
+    "Speed",
+    "True Peak",
+    "Maximum",
+    "Minimum",
+    "Average"
+  ],
+  "NonDeviceChannels": null,
+  "ValidationRules": [],
+  "UxRules": [],
+  "LayoutGroups": [
+    {
+      "Type": "Device",
+      "Name": "Device Properties",
+      "PropertyKeys": [
+        "SampleRate",
+        "TimeTriggerOffset"
+      ],
+      "Properties": null
+    },
+    {
+      "Type": "Socket",
+      "Name": "Controller",
+      "PropertyKeys": [
+        "Controller"
+      ],
+      "Properties": null
+    },
+    {
+      "Type": "Socket",
+      "Name": "Slots",
+      "PropertyKeys": [
+        "Slot 1",
+        "Slot 2",
+        "Slot 3",
+        "Slot 4",
+        "Slot 5",
+        "Slot 6",
+        "Slot 7",
+        "Slot 8"
+      ],
+      "Properties": null
+    }
+  ],
+  "ConfigurationTabs": [
+    {
+      "Title": "Equipment Mapping",
+      "Type": "equipmentMapping",
+      "Properties": null
+    },
+    {
+      "Title": "Channels",
+      "Type": "channels",
+      "Properties": null
+    },
+    {
+      "Title": "Data Sources",
+      "Type": "dataSources",
+      "Properties": null
+    },
+    {
+      "Title": "Device Properties",
+      "Type": "deviceProperties",
+      "Properties": null
+    },
+    {
+      "Title": "Hardware",
+      "Type": "deviceHardwareDetailsPanel",
+      "Properties": null
+    }
+  ],
+  "Configuration": [
+    {
+      "Section": "ServerComm",
+      "KeyValues": {
+        "ReconnectIntervalSeconds": "30",
+        "PacketSizeKbytes": "16",
+        "InterPacketDelay": "0",
+        "MaxAttempts": "-1"
+      }
+    },
+    {
+      "Section": "FileManager",
+      "KeyValues": {
+        "MaxFilesInMemoryPerGroup": "1",
+        "ManageDriveIntervalMinutes": "16",
+        "MinDriveFreeSpace": "30",
+        "BacklogFileIntervalMinutes": "7",
+        "BacklogFileBatchSize": "50",
+        "CleanupFileFoldersIntervalMinutes": "58",
+        "BacklogStreamTrendpoints": "true",
+        "BacklogTrendpoints": "false",
+        "BacklogExtraLargeFiles": "false"
+      }
+    },
+    {
+      "Section": "TdmsCreator",
+      "KeyValues": {
+        "FileMemoryTransferMode": "true",
+        "TdmsMemoryBlockSize": "8388608",
+        "TdmsMemoryStreamBlockSize": "1048576"
+      }
+    },
+    {
+      "Section": "Accumulator",
+      "KeyValues": {
+        "MaxBlockSeconds": "20",
+        "MinBlockSeconds": "1",
+        "MaxLowRateCPUPercent": "80",
+        "MaxLowRateMemoryPercent": "80"
+      }
+    },
+    {
+      "Section": "DataEventCreator",
+      "KeyValues": {
+        "MaxOpenFiles": "5"
+      }
+    },
+    {
+      "Section": "Acquisition",
+      "KeyValues": {
+        "SettlingTimeSeconds": "30",
+        "FpgaTachBufferMinimum": "4000",
+        "FpgaTachBufferPprMultiplier": "200"
+      }
+    },
+    {
+      "Section": "SinglePointClock",
+      "KeyValues": {
+        "IntervalSeconds": "1"
+      }
+    },
+    {
+      "Section": "TagPublisher",
+      "KeyValues": {
+        "OnDemandInterval": "30"
+      }
+    },
+    {
+      "Section": "SystemHealth",
+      "KeyValues": {
+        "UpdateInterval": "60"
+      }
+    },
+    {
+      "Section": "Authorization",
+      "KeyValues": {
+        "DisableDeviceWebService": "false",
+        "DisableDeviceRTProtocol": "false",
+        "DisableDeviceUSBConfiguration": "false"
+      }
+    },
+    {
+      "Section": "Controller",
+      "KeyValues": {
+        "SafeModeLookbackMinutes": "60",
+        "SafeModeAllowedReboots": "10"
+      }
+    },
+    {
+      "Section": "Watchdog",
+      "KeyValues": {
+        "SoftwareTimeout": "30",
+        "HardwareTimeout": "30",
+        "ServerCommTimeout": "100",
+        "ModbusTimeout": "60"
+      }
+    },
+    {
+      "Section": "Calculations",
+      "KeyValues": {
+        "CalculatedMetrics": "Crest Factor,Derived Peak,Peak-Peak,RMS,Speed,True Peak,Gap,Smax,Spectral Band,Spectral Band: Orders,Spectral Band: Phase,Residual,Synchronous,Asynchronous,High-Pass Peak-Peak,Maximum,Minimum,Average",
+        "NonDeviceChannels": null,
+        "MaxEmptySpeedBlocks": "5"
+      }
+    }
+  ]
+}

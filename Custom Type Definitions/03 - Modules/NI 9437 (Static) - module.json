@@ -1,0 +1,19 @@
+{
+  "Name": "NI 9437 (Static)",
+  "Type": "NI 9437 (Static)",
+  "ChannelGroupDefinitions": [
+    {
+      "NumberOfChannels": 8,
+      "ChannelTypes": [
+        "NI 943x (Static)"
+      ],
+      "DefaultChannelType": "NI 943x (Static)",
+      "Format": "Ch{0:00}",
+      "StartingChannelOffset": 0
+    }
+  ],
+  "Properties": {
+    "AlternateName": "NI 9437"
+  },
+  "SupportedSampleRates": null
+}

@@ -1,0 +1,29 @@
+{
+  "ChannelType": "NI 943x (Static)",
+  "MeasTypes": [
+    "SinglePoint|Digital Input"
+  ],
+  "PropertyDefinitions": [
+    {
+      "Key": "ScanEngine",
+      "Type": null,
+      "Label": null,
+      "ValueType": "Bool",
+      "DefaultValue": "true",
+      "Properties": null
+    }
+  ],
+  "Properties": {
+    "ChanStatus": "true"
+  },
+  "ValidationRules": null,
+  "UxRules": null,
+  "LayoutGroups": null,
+  "ConfigurationTabs": [
+    {
+      "Title": "Properties",
+      "Type": "properties",
+      "Properties": null
+    }
+  ]
+}

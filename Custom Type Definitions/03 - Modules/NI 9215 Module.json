@@ -1,0 +1,17 @@
+{
+  "Name": "NI 9215",
+  "Type": "NI 9215",
+  "ChannelGroupDefinitions": [
+    {
+      "NumberOfChannels": 4,
+      "ChannelTypes": [
+        "NI 9215"
+      ],
+      "DefaultChannelType": "NI 9215",
+      "Format": "Ch{0}",
+      "StartingChannelOffset": 0
+    }
+  ],
+  "Properties": null,
+  "SupportedSampleRates": null
+}
