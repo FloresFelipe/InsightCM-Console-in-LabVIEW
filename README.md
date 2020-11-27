@@ -22,8 +22,8 @@ If you are an enthusiast of State Machines, keep reading this article for a non-
 
 ### Project Goal :dart:
 
-In this project, I wanted to help a customer by giving them a more easy-to-use interface to incorporate a new device into the InsightCM server. It is a very detailed and complex tasks, with a lot of steps to do files to export, import, edit, etc. In addition to that, the interaction with the server should be done by command line. My goal was to help them upload a base version of this device
-and they will contract a developer to do the rest (i.e., they are not software developers and are not so proficient with those tricky steps). Try to lower their - and mine as a consequence - effort, I built a state machine that automates the more complicated parts.
+In this project, I wanted to help a customer by giving them a more easy-to-use interface to incorporate a new device into the InsightCM server. It is a very detailed and complex task, with a lot of steps to do files to export, import, edit, etc. In addition to that, the interaction with the server should be done by command line. My goal was to help them upload a base version of this device
+and they will contract a developer to do the rest (i.e., they are not software developers and are not so proficient with those tricky steps). To lower their effort - and mine as a consequence - I built a state machine that automates the more complicated parts.
 
 
 ## Design :notebook:
@@ -44,7 +44,7 @@ Same thing for the <span style=color:red>__Process Command Output__</span>.
 
 ![Process Standard Output](/documentation/images/Process%20Standard%20Output.png "Commands that are built")
 
-The <span style=color:green>__Open File__</span> State is a state that will exclusive to open the TDMS file we pull from the server.
+The <span style=color:green>__Open File__</span> State will exclusively open the TDMS file we pull from the server.
 
 
 ## Implementation :computer:
@@ -60,7 +60,7 @@ And this is how I structured the project files
 
 ### Running Multiple Commands in sequence
 
-During the development I found the need for running more than one command in sequence before going back to wait for an event. For example, I wanted to Run the both __Import Definitions__ and __List Definitions__ in a row and transition back to __Wait for an Event__. Thinking on the standard State Machine, we can only decide the next state and not a sequence of states. To address that, I made use of the managing the Enum of states in an array of states.
+During the development I found the need for running more than one command in sequence before going back to wait for an event. For example, I wanted to Run both __Import Definitions__ and __List Definitions__ in a row and transition back to __Wait for an Event__. Thinking on the standard State Machine, we can only decide the next state and not a sequence of states. To address that, I made use of the managing the Enum of states in an array of states.
 
 ![Array of States](/documentation/images/SM_StatesArray.png "Array of States")
 
